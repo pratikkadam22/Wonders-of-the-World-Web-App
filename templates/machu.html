@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+</style>
+<body>
+
+{% block content %}
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+       <a href="{{ url_for('home') }}" class="w3-bar-item w3-button w3-padding-large"><strong style="font-size: 20px">HOME</strong></a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Title Image -->
+  <div class="w3-display-container w3-center">
+    <img src="https://storage.googleapis.com/finalpkadam/templates/Machu_Picchu,_Peru.jpg" alt="Who am I?" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small"> 
+    </div>
+  </div>
+  
+
+  <!-- Main content with buttons and outputs -->
+  <div class="w3-container w3-content w3-center w3-padding-63" style="max-width:800px" id="band">
+    <h2 class="w3-wide"><button type="button" id="button1" onclick="showname()" class="btn btn-secondary btn-lg" style="font-size: 20px;font-family:'Georgia'"><strong>WHO AM I?</strong></button></h2>
+    <div id="showname" style="display:none;">
+	    <p class="w3-center" style="font-size: 30px;font-family:'Georgia'">{{ info }}</p><br>
+	    <p><h2 class="w3-wide"><button type="button" id="button2" onclick="showinfo()" class="btn btn-secondary btn-lg" style="font-size: 20px;font-family:'Georgia'"><strong>MORE INFO</strong></button></h2></div>
+    <div id="showinfo" style="display:none;"> 
+    <audio controls src="{{ url_for('static', filename='machu' ~ '.mp3') }}">audio file</audio>
+	    <div class="w3-row w3-padding-32" style="font-size: 15px;font-family:'Georgia'">
+		  <div class="w3-third" style="border-style: inset" >
+			<p><b>English</b></p>
+		   	<p align="left">Machu Picchu is a 15th-century Inca citadel, located in the Eastern Cordillera of southern Peru, on a mountain ridge 2,430 metres (7,970 ft) above sea level.</p>
+		  </div>
+		  <div class="w3-third" style="border-style: inset">
+			<p><b>Chinese</b></p>
+			<p align="left">{{ info2 }}</p>
+			
+		  </div>
+		  <div class="w3-third" style="border-style: inset">
+			<p><b>Hindi</b></p>
+			<p align="left">{{ info3 }}</p>
+		  </div>
+	    </div></div>
+	</div>
+  </div>
+
+ 
+  
+<!-- End Page Content -->
+</div>
+
+
+<script>
+function showname() {
+    var x = document.getElementById("showname");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    }
+}
+function showinfo() {
+    var y = document.getElementById("showinfo");
+    if (y.style.display=== "none") {
+	y.style.display = "block";
+	}
+}
+
+</script>
+{% endblock %}
+</body>
+</html>

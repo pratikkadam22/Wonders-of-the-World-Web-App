@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<title>Wonders of the World</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+</style>
+<body>
+{% block content %}
+
+<!-- Top menu -->
+<div class="w3-bar w3-black">
+  		<strong><center style="font-size: 30px;margin-top:10px">WONDERS OF THE WORLD
+  </div>
+  
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:70px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="wonders">
+    <div class="w3-quarter">
+      <a href="{{ url_for('giza') }}"><img src="https://storage.googleapis.com/finalpkadam/templates/1024px-Kheops-Pyramid.jpg" alt="Who am I?" style="width:100%"></a>
+      <h3>Completed c. 2560 BC</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="{{ url_for('wall') }}"><img src="https://storage.googleapis.com/finalpkadam/templates/1024px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg" alt="Who am I?" style="width:100%"></a>
+      <h3>Since 7th century BC</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="{{ url_for('petra') }}"><img src="https://storage.googleapis.com/finalpkadam/templates/The_Monastery%2C_Petra%2C_Jordan8.jpg" alt="Who am I?" style="width:100%"></a>
+      <h3>c. 100 BC</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="{{ url_for('colo') }}"><img src="https://storage.googleapis.com/finalpkadam/templates/KOLOSSEUM_-_panoramio.jpg" alt="Who am I?" style="width:100%"></a>
+      <h3>Completed AD 80</h3>
+    </div>
+  </div>
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-quarter">
+      <a href="{{ url_for('chichen') }}"><img src="https://storage.googleapis.com/finalpkadam/templates/Chichen-Itza-Castillo-Seen-From-East.JPG" alt="Who am I?" style="width:100%"></a>
+      <h3>c. AD 600</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="{{ url_for('machu') }}"><img src="https://storage.googleapis.com/finalpkadam/templates/Machu_Picchu%2C_Peru.jpg" alt="Who am I?" style="width:100%"></a>
+      <h3>c. AD 1450</h3>
+    </div>
+    <div class="w3-quarter">
+	<a href="{{ url_for('taj') }}"><img src="https://storage.googleapis.com/finalpkadam/templates/Taj_Mahal_in_March_2004.jpg" alt="Who am I?" style="width:100%"></a>
+      <h3>Completed c. AD 1648</h3>
+    </div>
+    <div class="w3-quarter">
+      <a href="{{ url_for('christ') }}"><img src="https://storage.googleapis.com/finalpkadam/templates/1_cristor_redentor_2014.jpg" alt="Who am I?" style="width:100%"></a>
+      <h3>Opened October 12, 1931</h3>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <br><footer class="w3-row-padding w3-center">
+    <div class="w3-third">
+      <h3>WONDERS</h3>
+      <p align="justify">The seven wonders of the world are impressive monuments regarded with awe and wonder. In the past, there were the seven wonders of the ancient world that amazed people who had the fortune to see them. Today, there are some spectacular monuments that are just as impressive as the ancient ones. The New 7 Wonders Foundation in Switzerland received around two hundred entries from across the world, and it finally short-listed twenty one finalists. In 2007, the final list of the seven modern wonders were announced in Lisbon, Portugal.</p>
+    </div>
+  
+    <div class="w3-third w3-center">
+      <h3>CONNECT</h3>
+      <p><a href="https://www.linkedin.com/in/pratik-kadam-317452149/" target="_blank"><img src="https://storage.googleapis.com/finalpkadam/templates/linked.jpg" alt="LinkedIn?" style="width:240px;height:75px;"></a></p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <h3>CONTACT</h3>
+      <p>Pratik Kadam</p>
+      <p>1604 SW Clay Street, Portland, OR 97201</p>
+      <p>pkadam@pdx.edu</p>
+      <p>971-754-9318</p>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+{% endblock %}
+</body>
+</html>
